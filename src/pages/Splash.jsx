@@ -8,46 +8,49 @@ const Splash = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             navigate('/home');
-        }, 2500); // 2.5s splash
+        }, 3000); // 3s splash
 
         return () => clearTimeout(timer);
     }, [navigate]);
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-black overflow-hidden relative">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blood/20 via-black to-black opacity-50"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-bat-purple/20 via-black to-black opacity-50"></div>
 
             <motion.div
-                initial={{ scale: 0.5, opacity: 0 }}
+                initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 1, ease: "easeOut" }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
                 className="z-10 flex flex-col items-center"
             >
-                <motion.img
-                    src="/bat.svg"
-                    alt="Bat Cave"
-                    className="w-32 h-32 md:w-48 md:h-48 drop-shadow-[0_0_20px_rgba(136,8,8,0.8)] filter transition-all"
-                    initial={{ y: 0 }}
-                    animate={{ y: [-10, 10, -10] }}
-                    transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-                />
+                <div className="relative group">
+                    <div className="absolute -inset-4 bg-bat-purple rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                    <motion.img
+                        src="/batcage/app-logo.jpg"
+                        alt="Bat Cave Logo"
+                        className="w-48 h-48 md:w-64 md:h-64 rounded-full border border-bat-purple/30 shadow-[0_0_50px_rgba(157,0,255,0.4)] object-cover"
+                        initial={{ rotate: -5, scale: 0.9 }}
+                        animate={{ rotate: 0, scale: 1 }}
+                        transition={{ duration: 2, ease: "easeOut" }}
+                    />
+                </div>
 
                 <motion.h1
-                    className="mt-8 text-4xl md:text-6xl font-extrabold tracking-[0.2em] font-serif uppercase text-white drop-shadow-[0_0_10px_rgba(136,8,8,0.5)]"
-                    initial={{ opacity: 0, y: 20 }}
+                    className="mt-12 text-5xl md:text-7xl font-black tracking-[0.3em] font-serif uppercase text-white drop-shadow-[0_0_20px_rgba(157,0,255,0.6)]"
+                    initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5, duration: 0.8 }}
+                    transition={{ delay: 0.8, duration: 1 }}
                 >
                     Bat Cave
                 </motion.h1>
 
                 <motion.p
-                    className="mt-4 text-blood/80 tracking-widest text-sm uppercase font-semibold"
+                    className="mt-6 text-bat-purple tracking-[0.5em] text-sm uppercase font-black"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 1.2, duration: 0.8 }}
+                    transition={{ delay: 1.5, duration: 1 }}
                 >
-                    Enter The Shadows
+                    Ignite The Night
                 </motion.p>
             </motion.div>
         </div>

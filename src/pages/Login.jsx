@@ -28,10 +28,10 @@ const Login = () => {
                 <img src="/bat.svg" alt="" className="w-full max-w-4xl h-auto grayscale filter contrast-200 blur-sm mix-blend-screen opacity-10" />
             </div>
 
-            <div className="max-w-md w-full space-y-8 bg-dark-surface/90 backdrop-blur-md p-10 rounded-2xl border border-blood/20 shadow-[0_0_50px_rgba(136,8,8,0.15)] relative z-10">
+            <div className="max-w-md w-full space-y-8 bg-dark-surface/90 backdrop-blur-md p-10 rounded-2xl border border-bat-purple/20 shadow-[0_0_50px_rgba(136,8,8,0.15)] relative z-10">
                 <div className="text-center">
                     <img src="/bat.svg" alt="Logo" className="mx-auto h-16 w-16 mb-6 drop-shadow-[0_0_10px_rgba(136,8,8,0.8)] filter brightness-150" />
-                    <h2 className="mt-2 text-center text-3xl font-extrabold text-white tracking-widest uppercase font-serif drop-shadow-lg text-shadow-blood">
+                    <h2 className="mt-2 text-center text-3xl font-extrabold text-white tracking-widest uppercase font-serif drop-shadow-lg text-shadow-bat-purple">
                         {isLogin ? 'Enter The Cave' : 'Join The Shadows'}
                     </h2>
                     <p className="mt-2 text-center text-sm text-gray-400 font-mono tracking-wide">
@@ -49,7 +49,7 @@ const Login = () => {
                                 <input
                                     type="text"
                                     required
-                                    className="appearance-none rounded-lg relative block w-full px-3 py-3 pl-10 border border-dark-border bg-black/50 placeholder-gray-500 text-white focus:outline-none focus:ring-blood/50 focus:border-blood/50 focus:z-10 sm:text-sm font-mono shadow-inner transition-colors transition-shadow hover:border-gray-600 focus:shadow-[0_0_10px_rgba(136,8,8,0.3)]"
+                                    className="appearance-none rounded-lg relative block w-full px-3 py-3 pl-10 border border-dark-border bg-black/50 placeholder-gray-500 text-white focus:outline-none focus:ring-bat-purple/50 focus:border-bat-purple/50 focus:z-10 sm:text-sm font-mono shadow-inner transition-colors transition-shadow hover:border-gray-600 focus:shadow-[0_0_10px_rgba(136,8,8,0.3)]"
                                     placeholder="Codename / Alias"
                                 />
                             </div>
@@ -65,7 +65,7 @@ const Login = () => {
                                 type="email"
                                 autoComplete="email"
                                 required
-                                className="appearance-none rounded-lg relative block w-full px-3 py-3 pl-10 border border-dark-border bg-black/50 placeholder-gray-500 text-white focus:outline-none focus:ring-blood/50 focus:border-blood/50 focus:z-10 sm:text-sm font-mono shadow-inner transition-colors transition-shadow hover:border-gray-600 focus:shadow-[0_0_10px_rgba(136,8,8,0.3)]"
+                                className="appearance-none rounded-lg relative block w-full px-3 py-3 pl-10 border border-dark-border bg-black/50 placeholder-gray-500 text-white focus:outline-none focus:ring-bat-purple/50 focus:border-bat-purple/50 focus:z-10 sm:text-sm font-mono shadow-inner transition-colors transition-shadow hover:border-gray-600 focus:shadow-[0_0_10px_rgba(136,8,8,0.3)]"
                                 placeholder="Secure frequency ID"
                             />
                         </div>
@@ -80,7 +80,7 @@ const Login = () => {
                                 type="password"
                                 autoComplete="current-password"
                                 required
-                                className="appearance-none rounded-lg relative block w-full px-3 py-3 pl-10 border border-dark-border bg-black/50 placeholder-gray-500 text-white focus:outline-none focus:ring-blood/50 focus:border-blood/50 focus:z-10 sm:text-sm font-mono shadow-inner transition-colors transition-shadow hover:border-gray-600 focus:shadow-[0_0_10px_rgba(136,8,8,0.3)]"
+                                className="appearance-none rounded-lg relative block w-full px-3 py-3 pl-10 border border-dark-border bg-black/50 placeholder-gray-500 text-white focus:outline-none focus:ring-bat-purple/50 focus:border-bat-purple/50 focus:z-10 sm:text-sm font-mono shadow-inner transition-colors transition-shadow hover:border-gray-600 focus:shadow-[0_0_10px_rgba(136,8,8,0.3)]"
                                 placeholder="Decryption key"
                             />
                         </div>
@@ -90,7 +90,7 @@ const Login = () => {
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-bold rounded-lg text-white bg-blood hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blood/50 focus:ring-offset-black transition-all duration-300 uppercase tracking-widest hover:shadow-[0_0_20px_rgba(136,8,8,0.6)] disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-bold rounded-lg text-white bg-bat-purple hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bat-purple/50 focus:ring-offset-black transition-all duration-300 uppercase tracking-widest hover:shadow-[0_0_20px_rgba(136,8,8,0.6)] disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                                 <LogIn className="h-5 w-5 text-white/50 group-hover:text-white/80 transition-colors" />
@@ -109,7 +109,7 @@ const Login = () => {
                     </button>
                     <button
                         onClick={() => setIsLogin(!isLogin)}
-                        className="font-medium text-blood hover:text-red-500 transition-colors uppercase tracking-wider text-xs hover:shadow-blood drop-shadow-lg"
+                        className="font-medium text-bat-purple hover:text-red-500 transition-colors uppercase tracking-wider text-xs hover:shadow-bat-purple drop-shadow-lg"
                     >
                         {isLogin ? 'New Recruit?' : 'Already Cleared?'}
                     </button>

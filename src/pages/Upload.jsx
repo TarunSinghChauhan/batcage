@@ -71,15 +71,15 @@ const Upload = () => {
 
     return (
         <div className="max-w-2xl mx-auto py-8 px-4 h-full flex flex-col">
-            <div className="flex items-center justify-between mb-8 pb-4 border-b border-blood/30">
-                <h2 className="text-2xl font-bold font-serif uppercase tracking-widest text-shadow-blood flex items-center gap-2">
-                    <Sparkles className="text-blood" size={24} /> New Intel
+            <div className="flex items-center justify-between mb-8 pb-4 border-b border-bat-purple/30">
+                <h2 className="text-2xl font-bold font-serif uppercase tracking-widest text-shadow-bat-purple flex items-center gap-2">
+                    <Sparkles className="text-bat-purple" size={24} /> New Intel
                 </h2>
                 {previewUrl && (
                     <button
                         disabled={isUploading}
                         onClick={handleSubmit}
-                        className="bg-blood hover:bg-red-800 text-white px-6 py-1.5 rounded text-sm font-semibold tracking-wide transition-all duration-300 disabled:opacity-50 shadow-[0_0_15px_rgba(136,8,8,0.5)] border border-transparent disabled:border-blood"
+                        className="bg-bat-purple hover:bg-purple-800 text-white px-6 py-1.5 rounded text-sm font-semibold tracking-wide transition-all duration-300 disabled:opacity-50 shadow-[0_0_15px_rgba(136,8,8,0.5)] border border-transparent disabled:border-bat-purple"
                     >
                         {isUploading ? 'Transmitting...' : 'Share'}
                     </button>
@@ -92,10 +92,10 @@ const Upload = () => {
                         onClick={() => fileInputRef.current?.click()}
                         onDragOver={handleDragOver}
                         onDrop={handleDrop}
-                        className="flex-1 border-2 border-dashed border-dark-border hover:border-blood/50 rounded-xl flex flex-col items-center justify-center bg-dark-surface/50 cursor-pointer transition-all hover:bg-dark-surface group group-hover:shadow-[inset_0_0_20px_rgba(136,8,8,0.1)]"
+                        className="flex-1 border-2 border-dashed border-dark-border hover:border-bat-purple/50 rounded-xl flex flex-col items-center justify-center bg-dark-surface/50 cursor-pointer transition-all hover:bg-dark-surface group group-hover:shadow-[inset_0_0_20px_rgba(136,8,8,0.1)]"
                     >
                         <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_15px_rgba(0,0,0,0.5)]">
-                            <UploadIcon size={40} className="text-gray-400 group-hover:text-blood drop-shadow-[0_0_5px_rgba(136,8,8,0)] group-hover:drop-shadow-[0_0_8px_rgba(136,8,8,0.8)] transition-all" />
+                            <UploadIcon size={40} className="text-gray-400 group-hover:text-bat-purple drop-shadow-[0_0_5px_rgba(136,8,8,0)] group-hover:drop-shadow-[0_0_8px_rgba(136,8,8,0.8)] transition-all" />
                         </div>
                         <p className="text-xl font-medium tracking-wide text-gray-300 mb-2 font-serif uppercase">Drop your visual evidence</p>
                         <p className="text-sm text-gray-500">Or click to browse encrypted files</p>
@@ -113,7 +113,7 @@ const Upload = () => {
                             <img src={previewUrl} alt="Preview" className="w-full h-full object-contain mix-blend-screen opacity-90" />
                             <button
                                 onClick={clearFile}
-                                className="absolute top-2 right-2 p-2 bg-black/50 hover:bg-blood rounded-full text-white backdrop-blur-sm transition-colors border border-gray-600 hover:border-blood"
+                                className="absolute top-2 right-2 p-2 bg-black/50 hover:bg-bat-purple rounded-full text-white backdrop-blur-sm transition-colors border border-gray-600 hover:border-bat-purple"
                             >
                                 <X size={20} />
                             </button>
@@ -124,7 +124,7 @@ const Upload = () => {
                                 value={caption}
                                 onChange={(e) => setCaption(e.target.value)}
                                 placeholder="Write a caption... (encrypted)"
-                                className="w-full flex-1 min-h-[150px] bg-dark-surface border border-dark-border rounded-lg p-4 text-white focus:outline-none focus:border-blood/50 resize-none transition-colors shadow-inner font-mono text-sm"
+                                className="w-full flex-1 min-h-[150px] bg-dark-surface border border-dark-border rounded-lg p-4 text-white focus:outline-none focus:border-bat-purple/50 resize-none transition-colors shadow-inner font-mono text-sm"
                             />
 
                             <div className="mt-4 flex items-center justify-between text-gray-400 border-t border-dark-border pt-4">

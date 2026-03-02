@@ -21,17 +21,17 @@ const Notifications = () => {
     return (
         <div className="max-w-xl mx-auto py-6 px-4">
             <div className="flex items-center space-x-3 mb-6">
-                <Bell size={24} className="text-blood drop-shadow-[0_0_8px_rgba(136,8,8,0.8)]" />
+                <Bell size={24} className="text-bat-purple drop-shadow-[0_0_8px_rgba(136,8,8,0.8)]" />
                 <h2 className="text-2xl font-bold font-serif uppercase tracking-wider">Alerts</h2>
             </div>
 
             <div className="space-y-4">
                 {mockNotifications.map((notif) => (
-                    <div key={notif.id} className={`flex items-start space-x-4 p-4 rounded-lg bg-dark-surface border border-dark-border transition-colors hover:border-blood/30 ${!notif.read ? 'border-l-4 border-l-blood bg-dark-surface/80' : ''}`}>
+                    <div key={notif.id} className={`flex items-start space-x-4 p-4 rounded-lg bg-dark-surface border border-dark-border transition-colors hover:border-bat-purple/30 ${!notif.read ? 'border-l-4 border-l-bat-purple bg-dark-surface/80' : ''}`}>
                         {/* Icon */}
                         <div className="w-10 h-10 rounded-full shadow-inner bg-black border border-gray-800 flex items-center justify-center shrink-0">
                             {notif.type === 'follow' && <UserPlus size={18} className="text-blue-500" />}
-                            {notif.type === 'like' && <Heart size={18} fill="#880808" stroke="none" className="drop-shadow-[0_0_5px_rgba(136,8,8,0.8)]" />}
+                            {notif.type === 'like' && <Heart size={18} fill="#9d00ff" stroke="none" className="drop-shadow-[0_0_5px_rgba(136,8,8,0.8)]" />}
                             {notif.type === 'comment' && <MessageSquare size={18} className="text-gray-300" />}
                             {notif.type === 'alert' && <Bell size={18} className="text-yellow-500 animate-pulse" />}
                         </div>

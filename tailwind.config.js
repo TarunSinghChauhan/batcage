@@ -12,9 +12,9 @@ export default {
                     surface: '#111111',
                     border: '#222222',
                 },
-                blood: {
-                    DEFAULT: '#880808',
-                    glow: 'rgba(136, 8, 8, 0.5)',
+                'bat-purple': {
+                    DEFAULT: '#9d00ff',
+                    glow: 'rgba(157, 0, 255, 0.5)',
                 }
             },
             animation: {

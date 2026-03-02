@@ -67,11 +67,21 @@ const Home = () => {
         }
     }, []);
 
+    const handleDeletePost = (postId) => {
+        const updatedPosts = posts.filter(post => post.id !== postId);
+        setPosts(updatedPosts);
+        localStorage.setItem('batcave_posts', JSON.stringify(updatedPosts));
+    };
+
     return (
         <div className="max-w-xl mx-auto py-6 sm:px-4">
             <div className="space-y-4">
                 {posts.map((post) => (
-                    <PostCard key={post.id} post={post} />
+                    <PostCard
+                        key={post.id}
+                        post={post}
+                        onDelete={() => handleDeletePost(post.id)}
+                    />
                 ))}
             </div>
             {/* Loading state / end of feed placeholder */}
